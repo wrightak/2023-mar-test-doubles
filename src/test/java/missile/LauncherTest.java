@@ -1,0 +1,4 @@
+package missile;
+
+class LauncherTest {
+}

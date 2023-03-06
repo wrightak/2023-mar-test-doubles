@@ -1,4 +1,4 @@
-package missile;
+package rocket;
 
 class LauncherTest {
 }

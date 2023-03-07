@@ -7,11 +7,11 @@ public class FakeUsedLaunchCodes implements UsedLaunchCodes {
 
     @Override
     public boolean contains(LaunchCode launchCode) {
-        return false;
+        return launchCodes.contains(launchCode);
     }
 
     @Override
     public void add(LaunchCode launchCode) {
-
+        launchCodes.add(launchCode);
     }
 }

@@ -10,12 +10,15 @@ class UsedLaunchCodesTest {
     void contains() {
         UsedLaunchCodes usedLaunchCodes = new FakeUsedLaunchCodes();
 
-        GoodLaunchCodeStub launchCode = new GoodLaunchCodeStub();
-        
-        assertFalse(usedLaunchCodes.contains(launchCode));
-        
-        usedLaunchCodes.add(launchCode);
+        GoodLaunchCodeStub launchCode1 = new GoodLaunchCodeStub();
+        GoodLaunchCodeStub launchCode2 = new GoodLaunchCodeStub();
 
-        assertTrue(usedLaunchCodes.contains(launchCode));
+        assertFalse(usedLaunchCodes.contains(launchCode1));
+        assertFalse(usedLaunchCodes.contains(launchCode2));
+
+        usedLaunchCodes.add(launchCode1);
+
+        assertTrue(usedLaunchCodes.contains(launchCode1));
+        assertFalse(usedLaunchCodes.contains(launchCode2));
     }
 }
